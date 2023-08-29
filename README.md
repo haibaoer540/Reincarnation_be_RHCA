@@ -40,10 +40,13 @@ uname -a
 
 - useradd
   
-  > useradd&nbsp;-d&nbsp;`用户主目录`&nbsp;-m&nbsp;-s&nbsp;`shell路径`&nbsp;-g&nbsp;`用户组`&nbsp;`用户名`
+  > useradd&nbsp;-d&nbsp;`用户主目录`&nbsp;-m&nbsp;-s&nbsp;`shell路径`&nbsp;`用户名`
   ```
-  useradd -d /home/tuotuo -m -s /bin/sh root tuotuo
+  useradd -d /home/tuotuo -m -s /bin/sh tuotuo
   ```
+> -p  
+>> 未使用`-p`参数表示：创建用户时，默认创建与`用户名`相同的组；<br>
+>> 使用`-p`参数表示:创建用户时，将用户加入指定`已存在的组`。
 ### 删除用户
 
 - userdel
@@ -52,9 +55,11 @@ uname -a
   ```
   userdel -r xxx
   ```
-  ### 修改用户信息
+## 修改用户信息
 
   - usermod
 
-    > usermod&nbsp;-d&nbsp;`用户主目录`&nbsp;-m&nbsp;-s&nbsp;`shell路径`&nbsp;-g&nbsp;`用户组`&nbsp;`用户名`
-  
+    > usermod&nbsp;-d&nbsp;`新的用户主目录`&nbsp;-m&nbsp;-s&nbsp;`新的shell路径`&nbsp;-g&nbsp;`其他用户组`&nbsp;-l&nbsp;`新的用户名`&nbsp;`用户名`
+    ```
+    usermod -d /home/tuo -m -s /bin/bash -g root -l tuo tuotuo
+    ```
