@@ -35,7 +35,7 @@ uname -a
 ```
 - 输出以下内容
   >`内核名`、`主机名`、`内核发行号`、`内核版本号`、`主机的硬件架构`、`操作系统名称`。
-## 用户及用户组管理
+## 用户管理
 ### 创建新用户
 
 - useradd
@@ -44,9 +44,9 @@ uname -a
   ```
   useradd -d /home/tuotuo -m -s /bin/sh tuotuo
   ```
-> -p  
+>  $\color{#006666}{-p}$   
 >> 未使用`-p`参数表示：创建用户时，默认创建与`用户名`相同的组；<br>
->> 使用`-p`参数表示:创建用户时，将用户加入指定`已存在的组`。
+>> 使用`-p`参数表示：创建用户时，将用户加入指定`已存在的组`。
 ### 删除用户
 
 - userdel
@@ -55,11 +55,27 @@ uname -a
   ```
   userdel -r xxx
   ```
-## 修改用户信息
+### 修改用户信息
 
   - usermod
-
+    
     > usermod&nbsp;-d&nbsp;`新的用户主目录`&nbsp;-m&nbsp;-s&nbsp;`新的shell路径`&nbsp;-g&nbsp;`其他用户组`&nbsp;-l&nbsp;`新的用户名`&nbsp;`用户名`
     ```
     usermod -d /home/tuo -m -s /bin/bash -g root -l tuo tuotuo
+    ```
+### 用户口令
+
+- passwd
+
+  > passwd `用户名`
+  ```
+  passwd tuotuo
+  ```
+  ## 用户组管理
+
+  - groupadd
+ 
+    > groupadd&nbsp;-g&nbsp;`用户组gid`&nbsp;`用户组名`
+    ```
+    groupadd -g 1020 tuotuo
     ```
