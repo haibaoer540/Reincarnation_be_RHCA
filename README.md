@@ -52,4 +52,9 @@ uname -a
   ```
   userdel -r xxx
   ```
+  ### 修改用户信息
+
+  - usermod
+
+    > usermod&nbsp;-d&nbsp;`用户主目录`&nbsp;-m&nbsp;-s&nbsp;`shell路径`&nbsp;-g&nbsp;`用户组`&nbsp;`用户名`
   
