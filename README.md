@@ -71,11 +71,13 @@ uname -a
   ```
   passwd tuotuo
   ```
-  ## 用户组管理
-
+## 用户组管理
+### 创建用户组
   - groupadd
  
     > groupadd&nbsp;-g&nbsp;`用户组gid`&nbsp;`用户组名`
     ```
     groupadd -g 1020 tuotuo
     ```
+### 修改用户组
+### 删除用户组
