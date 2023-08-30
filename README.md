@@ -80,4 +80,16 @@ uname -a
     groupadd -g 1020 tuotuo
     ```
 ### 修改用户组
+- groupmod
+
+  > groupmod&nbsp;–g&nbsp;`用户组gid`&nbsp;-n&nbsp;`新用户租名`&nbsp;`用户组名`
+    ```
+    groupmod –g 10000 -n tuo tuotuo
+    ```
 ### 删除用户组
+- groupdel
+
+  > groupdel&nbsp;`用户组名`
+    ```
+    groupdel tuotuo
+    ```
