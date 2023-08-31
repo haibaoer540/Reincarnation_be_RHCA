@@ -1,4 +1,4 @@
-# 0.0zZ
+# 0.0zZ项目介绍及更新说明
 > 此项目起初是为了提供给`tuotooo`日常办公方便查找命令和相关资料创建。
 >>内容主要包括，考RHCSA和RHCE证书涵盖的相关知识。
 >>>:construction::rabbit::clamp::cyclone::fire:
