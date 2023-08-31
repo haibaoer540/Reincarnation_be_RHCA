@@ -5,7 +5,7 @@
 
 # VMware 共享盘
 > 在`VMware 虚拟机配置文件`中添加`disk.locking="FALSE"`和`scsi[n].sharedBus = "virtual"`。
-# linux各版本常用命令
+# linux各版本基础命令
 作为一个linux操作系统的用户，这些内容都是必须要掌握的。
 >未做`🍡`标记的命令都是适用于linux各个版本。
 ## 关机/重启
