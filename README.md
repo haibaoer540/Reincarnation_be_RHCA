@@ -99,3 +99,26 @@ uname -a
     ```
     groupdel tuotuo
     ```
+## 磁盘管理
+### 创建新的主分区并挂载
+- fdisk
+  > 2TB以下磁盘空间。
+  1. > fdisk -l
+     
+    - 输出以下内容
+      
+      > `所有物理盘的信息`,`所有逻辑分区的信息`。
+  2. > fdisk `磁盘名称`
+       ```
+       fdisk /dev/sdb
+       ```
+  3. > Command (m for help): <kbd>n</kbd>
+     
+    - 输出操作提示
+      |e|p|
+      |:-:|:-:|
+      |创建扩展分区|创建主分区|
+  4. > Command (m for help): <kbd>w</kbd>
+    - 保存并退出
+      
+- mkfs
