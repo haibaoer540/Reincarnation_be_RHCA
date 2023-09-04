@@ -134,3 +134,13 @@ uname -a
   ```
   mount /dev/sdc1 /home/tuotuo
   ```
+## 文件与目录管理
+> **绝对路径**：由根目录`/`开始。<br>
+> **相对路径**：由当前工作路径开始。
+### 查看当前目录下的文件
+`dr-xr-xr-x`解析：第一个字符
+- ls
+  - ls -l
+    - 输出以下内容
+      > total 1 <br>
+      > dr-xr-xr-x   2 root root 4096 Dec 14  2012 tuotuo
