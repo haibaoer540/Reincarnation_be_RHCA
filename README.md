@@ -130,7 +130,7 @@ uname -a
     mkfs.xfs /dev/sdb1
     ```
 - mount
-  -mount `磁盘名称` `文件目录`
+  - mount `磁盘名称` `文件目录`
   ```
   mount /dev/sdc1 /home/tuotuo
   ```
