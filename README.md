@@ -100,7 +100,9 @@ uname -a
     groupdel tuotuo
     ```
 ## 磁盘管理
+> `/dev/`目录是储存磁盘表的地方。
 ### 创建新的主分区并挂载
+> 使用`fdisk`创建新磁盘，再使用`mkfs`将磁盘格式化，最后使用`mount`将磁盘挂载。
 - fdisk
   > 2TB以下磁盘空间。
   1. > fdisk -l
@@ -122,3 +124,13 @@ uname -a
     - 保存并退出
       
 - mkfs
+  > 可以格式化大部分linux文件系统类型。
+  - mkfs.`文件系统类型` `磁盘名称`
+    ```
+    mkfs.xfs /dev/sdb1
+    ```
+- mount
+  -mount `磁盘名称` `文件目录`
+  ```
+  mount /dev/sdc1 /home/tuotuo
+  ```
