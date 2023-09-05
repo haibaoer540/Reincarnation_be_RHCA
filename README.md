@@ -10,11 +10,11 @@
 >未做`🍡`标记的命令都是适用于linux各个版本。
 ## 关机/重启
 - 关机
-```
+```python
 shutdown now
 ```
 - 重启
-```
+```python
 reboot
 ```
 ## 绝对路径/相对路径
@@ -23,14 +23,14 @@ reboot
 > `相对路径` ：由`当前工作路径`开头。
 ## 网卡基础配置
 - 查询当前网卡配置信息
-```
+```python
 ip addr
 ```
-```
+```python
 ifconfig
 ```
 ## 检查系统版本
-```
+```python
 uname -a
 ```
 - 输出以下内容
@@ -44,7 +44,7 @@ uname -a
 - useradd
   
   > useradd&nbsp;-d&nbsp;`用户主目录`&nbsp;-m&nbsp;-s&nbsp;`shell路径`&nbsp;`用户名`
-  ```
+  ```python
   useradd -d /home/tuotuo -m -s /bin/sh tuotuo
   ```
 >  $\color{#006666}{-p}$   
@@ -55,7 +55,7 @@ uname -a
 - userdel
 
   > userdel&nbsp;-r&nbsp;`用户名`
-  ```
+  ```python
   userdel -r xxx
   ```
 ### 修改用户信息
@@ -63,7 +63,7 @@ uname -a
   - usermod
     
     > usermod&nbsp;-d&nbsp;`新的用户主目录`&nbsp;-m&nbsp;-s&nbsp;`新的shell路径`&nbsp;-g&nbsp;`其他用户组`&nbsp;-l&nbsp;`新的用户名`&nbsp;`用户名`
-    ```
+    ```python
     usermod -d /home/tuo -m -s /bin/bash -g root -l tuo tuotuo
     ```
 ### 用户口令
@@ -71,7 +71,7 @@ uname -a
 - passwd
 
   > passwd `用户名`
-  ```
+  ```python
   passwd tuotuo
   ```
 ## 用户组管理
@@ -82,21 +82,21 @@ uname -a
   - groupadd
  
     > groupadd&nbsp;-g&nbsp;`用户组gid`&nbsp;`用户组名`
-    ```
+    ```python
     groupadd -g 1020 tuotuo
     ```
 ### 修改用户组
 - groupmod
 
   > groupmod&nbsp;–g&nbsp;`用户组gid`&nbsp;-n&nbsp;`新用户租名`&nbsp;`用户组名`
-    ```
+    ```python
     groupmod –g 10000 -n tuo tuotuo
     ```
 ### 删除用户组
 - groupdel
 
   > groupdel&nbsp;`用户组名`
-    ```
+    ```python
     groupdel tuotuo
     ```
 ## 磁盘管理
@@ -111,7 +111,7 @@ uname -a
       
       > `所有物理盘的信息`,`所有逻辑分区的信息`。
   2. > fdisk `磁盘名称`
-       ```
+       ```python
        fdisk /dev/sdb
        ```
   3. > Command (m for help): <kbd>n</kbd>
@@ -126,21 +126,38 @@ uname -a
 - mkfs
   > 可以格式化大部分linux文件系统类型。
   - mkfs.`文件系统类型` `磁盘名称`
-    ```
+    ```python
     mkfs.xfs /dev/sdb1
     ```
 - mount
   - mount `磁盘名称` `文件目录`
-  ```
+  ```python
   mount /dev/sdc1 /home/tuotuo
   ```
 ## 文件与目录管理
 > **绝对路径**：由根目录`/`开始。<br>
 > **相对路径**：由当前工作路径开始。
 ### 查看当前目录下的文件
-`dr-xr-xr-x`解析：第一个字符
-- ls
-  - ls -l
-    - 输出以下内容
-      > total 1 <br>
-      > dr-xr-xr-x   2 root root 4096 Dec 14  2012 tuotuo
+```
+ls -l
+```
+- 输出以下内容
+```python
+total 1 #目录下的文件个数
+drwxrwxrwx 1 tuo tuotuo 4096 Jan 15 00:00 tuotu0
+```
+**drwxrwxrwx：**
+  - 第一个字符为`d`表示该文件是一个文件夹（目录）
+  - 第一个字符为`-`表示该文件是一个文件
+  - 第一个字符为`l`表示该文件是一个链接文件
+  - 后面的字符每三个为一组，分别代表`文件所属用户的权限`、`文件所属用户组的权限`、`文件所属其他用户的权限`
+  - `r`可读、`w`可写、`x`可执行、`-`无
+
+|1|tuo|tuotuo|4096|Jan 15 00:00|tuotu0|
+|:-:|:-:|:-:|:-:|:-:|:-:|
+|number of hard links|文件所属用户的名称|文件所属组的名称|文件大小|文件最后修改时间|文件名称|
+
+### 查看当前工作目录
+```python
+pwd
+```
