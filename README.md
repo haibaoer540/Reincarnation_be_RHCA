@@ -132,25 +132,25 @@ uname -a
     ```
 - mount
   - mount `磁盘名称` `文件目录`
-  ```python
-  mount /dev/sdc1 /home/tuotuo
-  ```
+    ```python
+    mount /dev/sdc1 /home/tuotuo
+    ```
 ## 文件与目录管理
 > **绝对路径**：由根目录`/`开始。<br>
 > **相对路径**：由当前工作路径开始。
 ### 查看当前目录下的文件
 - ls
   - ls -l
-  ```python
-  total 1 #目录下的文件个数
-  drwxrwxrwx 1 tuo tuotuo 4096 Jan 15 00:00 tuotu0
-  ```
-  **drwxrwxrwx：**
-    - 第一个字符为`d`表示该文件是一个文件夹（目录）
-    - 第一个字符为`-`表示该文件是一个文件
-    - 第一个字符为`l`表示该文件是一个链接文件
-    - 后面的字符每三个为一组，分别代表`文件所属用户的权限`、`文件所属用户组的权限`、`文件所属其他用户的权限`
-    - `r`可读、`w`可写、`x`可执行、`-`无
+    ```python
+    total 1 #目录下的文件个数
+    drwxrwxrwx 1 tuo tuotuo 4096 Jan 15 00:00 tuotu0
+    ```
+    **drwxrwxrwx：**
+     - 第一个字符为`d`表示该文件是一个文件夹（目录）
+      - 第一个字符为`-`表示该文件是一个文件
+      - 第一个字符为`l`表示该文件是一个链接文件
+      - 后面的字符每三个为一组，分别代表`文件所属用户的权限`、`文件所属用户组的权限`、`文件所属其他用户的权限`
+      - `r`可读、`w`可写、`x`可执行、`-`无
 
       |1|tuo|tuotuo|4096|Jan 15 00:00|tuotu0|
       |:-:|:-:|:-:|:-:|:-:|:-:|
@@ -162,35 +162,66 @@ pwd
 ```
 
 ### 更改文件所属用户组  
-- chgrp&nbsp;-R&nbsp;`新的所属用户组`&nbsp;`文件名`
-  > chgrp -R tuotuo tuotuo
+- chgrp
+  
+  > chgrp&nbsp;-R&nbsp;`新的所属用户组`&nbsp;`文件名`
+
+    ```
+    chgrp -R tuotuo tuotuo
+    ```
 ### 更改所属用户
-- chown&nbsp;`新的用户`&nbsp;`文件名`
-  > chown tuotuo tuotu0
+- chown
+  
+  > chown&nbsp;`新的用户`&nbsp;`文件名`
+  
+    ```python
+    chown tuotuo tuotu0
+    ```
 ### 更改文件各用户及用户组权限
-- chmod&nbsp;`权限`&nbsp;`文件名`
-  > chmod 770 tuotuo
+- chmod
+
+  > chmod&nbsp;`权限`&nbsp;`文件名`
+  
+    ```pyhton
+    chmod 770 tuotuo
+    ```
 ### 切换工作目录
 - cd
+  
   > cd&nbsp;`绝对路径或相对路径`
+  
   ```python
   cd /home/tuotuo
   ```
 ### 创建目录
 - mkdir
+  
   > mkdir&nbsp;`目录名`
+  
   ```python
   mkdir tu0tu0
   ```
 ### 复制文件或目录
 - cp
+  
   > cp&nbsp;`被复制的文件名或目录名`&nbsp;`复制到xx文件或目录`
+  
   ```python
   cp /home/tuotuo /home/tu0tu0
   ```
 ### 删除文件或目录
 - rm
+  
   > rm&nbsp;-f&nbsp;-r&nbsp;`文件或目录名`
+  
+  ```python
+  rm -f -r xxx
+  ```
 ### 移动文件或目录
 - mv
+  
   > mv&nbsp;`被移动的文件名或目录名`&nbsp;`移动到xx目录`
+  
+  ```python
+  mv /home/tuotuo /home/tuotu0
+  ```
