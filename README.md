@@ -5,7 +5,7 @@
 >>>:construction::rabbit::clamp::cyclone::fire:
 
 涵盖基础内容:
-- 关机/重启
+- [关机/重启](basics.md#关机重启)
 - 绝对路径/相对路径
 - 网卡基础配置
 - 检查系统版本
