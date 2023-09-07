@@ -11,7 +11,7 @@ shutdown now
 reboot
 ```
 
-## 网卡基础配置
+## 查看网卡配置
 - 查询当前网卡配置信息
 ```python
 ip addr
