@@ -39,6 +39,7 @@ docker images
   ```
 
 # 容器管理
+
 ## 查询现有的容器
 ```python
 docker ps -a
@@ -47,11 +48,24 @@ docker ps -a
 - 输出以下内容
   > `容器ID`、`镜像名`、`shell交互路径`等
 
-## 创建并在前台启动容器
-- docker run -it `镜像` `shell交互路径`
+## 创建并启动容器
+- docker run -itd --name `容器名` `镜像名` `shell交互路径`
+
+  ```c
+  docker run -itd --name tuotuo ubuntu:18.04 /bin/bash
+  ```
+
+## 创建并启动进入容器
+- docker run -it --name `容器名` `镜像` `shell交互路径`
   
   ```python
-  docker run -it ubuntu:18.04 /bin/bash
+  docker run -it --name tuotuo ubuntu:18.04 /bin/bash
+  ```
+## 停止一个容器
+- docker stop `容器ID`
+
+  ```c
+  docker stop o000tuotuo00
   ```
 ## 启动现有已停止的容器
 - docker start `容器ID`
@@ -59,20 +73,7 @@ docker ps -a
   ```python
   docker start o000tuotuo00
   ```
-
-## 停止一个容器
-- docker stop `容器ID`
-
-  ```c
-  docker stop o000tuotuo00
-  ```
-## 创建并在后台启动容器
-- docker run -itd --name `容器名` `镜像名` `shell交互路径`
-
-  ```c
-  docker run -itd --name tuotuo ubuntu:18.04 /bin/bash
-  ```
-## 进入挂在后台的容器
+## 进入容器
 - docker exec -it `容器ID` `shell交互路径`
 
   ```C
