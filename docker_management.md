@@ -47,14 +47,6 @@ docker ps -a
 
 - 输出以下内容
   > `容器ID`、`镜像名`、`shell交互路径`等
-
-## 创建并启动容器
-- docker run -itd --name `容器名` `镜像名` `shell交互路径`
-
-  ```c
-  docker run -itd --name tuotuo ubuntu:18.04 /bin/bash
-  ```
-
 ## 创建并启动进入容器
 - docker run -it --name `容器名` `镜像` `shell交互路径`
   
@@ -73,9 +65,32 @@ docker ps -a
   ```python
   docker start o000tuotuo00
   ```
-## 进入容器
-- docker exec -it `容器ID` `shell交互路径`
+## 创建并启动容器
+> 容器会在后台运行。
+- docker run -itd --name `容器名` `镜像名` `shell交互路径`
 
-  ```C
-  docker attach o000tuotuo00 /bin/bash
+  ```c
+  docker run -itd --name tuotuo ubuntu:18.04 /bin/bash
   ```
+## 查询在运行的容器
+```c
+docker ps
+```
+
+- 输出以下内容
+  > `容器ID`、`镜像名`、`shell交互路径`等
+## 进入容器
+- docker attach
+  > `exit`退出时会关闭容器
+  - docker attach `容器ID` `shell交互路径`
+
+    ```C
+    docker attach o000tuotuo00 /bin/bash
+    ```
+- docker exec
+  > `exec`退出时将容器挂入后台运行
+  - docker exec -it `容器ID` `shell交互路径`
+    ```c
+    docker exec -it o000tuotuo00 /bin/bash
+    ```
+## 
