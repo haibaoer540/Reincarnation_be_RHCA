@@ -81,16 +81,20 @@ docker ps
   > `容器ID`、`镜像名`、`shell交互路径`等
 ## 进入容器
 - docker attach
+  
   > `exit`退出时会关闭容器
+  
   - docker attach `容器ID` `shell交互路径`
 
     ```C
     docker attach o000tuotuo00 /bin/bash
     ```
 - docker exec
+  
   > `exec`退出时将容器挂入后台运行
+  
   - docker exec -it `容器ID` `shell交互路径`
+    
     ```c
     docker exec -it o000tuotuo00 /bin/bash
     ```
-## 
