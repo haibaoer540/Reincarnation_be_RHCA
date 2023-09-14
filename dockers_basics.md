@@ -8,19 +8,25 @@
 
 # 镜像管理
 ## 查询所有已安装的镜像
+
 ```python
 docker images
 ```
+
 - 输出以下内容
+  
   > `镜像的仓库源`、`版本`、`镜像ID`、`创建时间`、`大小`
 
 ## 搜索镜像
+
 - docker search `镜像名`
 
   ```python
   docker search ubuntu
   ```
+  
 - 输出以下内容
+  
   > `镜像的仓库源`、`描述`、`自动构建`、`官方标识`、`好评`
   
 ## 获取新镜像
@@ -41,12 +47,15 @@ docker images
 # 容器管理
 
 ## 查询现有的容器
+
 ```python
 docker ps -a
 ```
 
 - 输出以下内容
+  
   > `容器ID`、`镜像名`、`shell交互路径`等
+  
 ## 创建并启动进入容器
 - docker run -it --name `容器名` `镜像` `shell交互路径`
   
@@ -73,12 +82,15 @@ docker ps -a
   docker run -itd --name tuotuo ubuntu:18.04 /bin/bash
   ```
 ## 查询在运行的容器
+
 ```c
 docker ps
 ```
 
 - 输出以下内容
+  
   > `容器ID`、`镜像名`、`shell交互路径`等
+  
 ## 进入容器
 - docker attach
   
