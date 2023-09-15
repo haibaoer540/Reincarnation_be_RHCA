@@ -230,3 +230,20 @@ pwd
   ```python
   mv /home/tuotuo /home/tuotu0
   ```
+## 进程管理
+### 打断当前进程
+> <kbd>CTRL</kbd>+<kbd>C</kbd>
+### 暂停当前进程放入后台
+> <kbd>CTRL</kbd>+<kbd>Z</kbd>
+### 查看后台进程
+```
+jobs
+```
+### 将暂停的后台进程移动到前台继续执行
+- fg
+
+  > fg `后台进程编号`
+
+  ```
+  fg 1
+  ```
