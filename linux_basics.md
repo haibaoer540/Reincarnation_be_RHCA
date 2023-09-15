@@ -93,37 +93,53 @@ uname -a
 > `/dev/`目录是储存磁盘表的地方。
 ### 创建新的主分区并挂载
 > 使用`fdisk`创建新磁盘，再使用`mkfs`将磁盘格式化，最后使用`mount`将磁盘挂载。
+
 - fdisk
+
   > 2TB以下磁盘空间。
+  
   1. > fdisk -l
      
     - 输出以下内容
       
       > `所有物理盘的信息`,`所有逻辑分区的信息`。
+      
   2. > fdisk `磁盘名称`
+     
        ```python
        fdisk /dev/sdb
        ```
+       
   3. > Command (m for help): <kbd>n</kbd>
      
     - 输出操作提示
+      
       |e|p|
       |:-:|:-:|
       |创建扩展分区|创建主分区|
+      
   4. > Command (m for help): <kbd>w</kbd>
+  
     - 保存并退出
       
 - mkfs
+  
   > 可以格式化大部分linux文件系统类型。
+
   - mkfs.`文件系统类型` `磁盘名称`
+  
     ```python
     mkfs.xfs /dev/sdb1
     ```
+    
 - mount
+  
   - mount `磁盘名称` `文件目录`
+  
     ```python
     mount /dev/sdc1 /home/tuotuo
     ```
+    
 ## 文件与目录管理
 > **绝对路径**：由根目录`/`开始。<br>
 > **相对路径**：由当前工作路径开始。
