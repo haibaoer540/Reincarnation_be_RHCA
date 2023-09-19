@@ -24,7 +24,7 @@ uname -a
 - 输出以下内容
   >`内核名`、`主机名`、`内核发行号`、`内核版本号`、`主机的硬件架构`、`操作系统名称`。
 ## 用户管理
-> :mushroom:一个用户可以有多个组。
+> :mushroom:一个用户可以有多个组。<br>
 > `/etc/passwd`文件储存了`用户名`:`口令`:`用户uid`:`用户组gid`:`注释性描述`:`用户主目录`:`Shell路径`。
 ### 创建新用户
   > useradd&nbsp;-d&nbsp;`用户主目录`&nbsp;-m&nbsp;-s&nbsp;`shell路径`&nbsp;`用户名`
@@ -80,14 +80,17 @@ groupmod –g 10000 -n tuo tuotuo
        fdisk /dev/sdb
        ```       
   3. > Command (m for help): <kbd>n</kbd>  
-    - 输出操作提示   
-|e|p|
-|:-:|:-:|
-|创建扩展分区|创建主分区| 
+    - 输出操作提示
+       
+      |e|p|
+      |:-:|:-:|
+      |创建扩展分区|创建主分区|
+  
   4. > Command (m for help): <kbd>w</kbd>
-    - 保存并退出
-  > 可以格式化大部分linux文件系统类型。
+
+  
 - mkfs.`文件系统类型` `磁盘名称`
+  > 可以格式化大部分linux文件系统类型。
   ```python
   mkfs.xfs /dev/sdb1
   ```
@@ -106,16 +109,20 @@ groupmod –g 10000 -n tuo tuotuo
   drwxrwxrwx 1 tuo tuotuo 4096 Jan 15 00:00 tuotu0
   ```
 <details> 
-    <summary><b>drwxrwxrwx</b></summary>     
+    <summary><b>drwxrwxrwx</b></summary>   
+  
 - 第一个字符为`d`表示该文件是一个文件夹（目录）
 - 第一个字符为`-`表示该文件是一个文件
 - 第一个字符为`l`表示该文件是一个链接文件
 - 后面的字符每三个为一组，分别代表`文件所属用户的权限`、`文件所属用户组的权限`、`文件所属其他用户的权限`
 - <code>r</code>可读、`w`可写、`x`可执行、`-`无      
+
 </details>
+
 |1|tuo|tuotuo|4096|Jan 15 00:00|tuotu0|
 |:-:|:-:|:-:|:-:|:-:|:-:|
 |number of hard links|文件所属用户的名称|文件所属组的名称|文件大小|文件最后修改时间|文件名称|
+
 ### 查看当前工作目录
 ```python
 pwd
@@ -177,7 +184,7 @@ jobs -l
   fg %1
   ```
 ### 在创建任务时将命令放入后台执行
-- `命令` &
+> `命令` &
   ```
   ping 1.1.1.1 &
   ```
