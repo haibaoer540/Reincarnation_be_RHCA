@@ -32,7 +32,7 @@ uname -a
 > `/etc/passwd`文件储存了`用户名`:`口令`:`用户uid`:`用户组gid`:`注释性描述`:`用户主目录`:`Shell路径`。
 ### 创建新用户
 
-- useradd
+
   
   > useradd&nbsp;-d&nbsp;`用户主目录`&nbsp;-m&nbsp;-s&nbsp;`shell路径`&nbsp;`用户名`
   ```python
@@ -43,23 +43,17 @@ uname -a
 > 使用`-p`参数表示：创建用户时，将用户加入指定`已存在的组`。
 ### 删除用户
 
-- userdel
-
   > userdel&nbsp;-r&nbsp;`用户名`
   ```python
   userdel -r xxx
   ```
 ### 修改用户信息
-
-  - usermod
     
     > usermod&nbsp;-d&nbsp;`新的用户主目录`&nbsp;-m&nbsp;-s&nbsp;`新的shell路径`&nbsp;-g&nbsp;`其他用户组`&nbsp;-l&nbsp;`新的用户名`&nbsp;`用户名`
     ```python
     usermod -d /home/tuo -m -s /bin/bash -g root -l tuo tuotuo
     ```
 ### 用户口令
-
-- passwd
 
   > passwd `用户名`
   ```python
@@ -70,21 +64,18 @@ uname -a
 >
 > `/etc/group`文件存储了`用户组名`:`口令`:`用户组gid`:`组内用户列表`。
 ### 创建用户组
-  - groupadd
- 
+
     > groupadd&nbsp;-g&nbsp;`用户组gid`&nbsp;`用户组名`
     ```python
     groupadd -g 1020 tuotuo
     ```
 ### 修改用户组
-- groupmod
 
   > groupmod&nbsp;–g&nbsp;`用户组gid`&nbsp;-n&nbsp;`新用户租名`&nbsp;`用户组名`
     ```python
     groupmod –g 10000 -n tuo tuotuo
     ```
 ### 删除用户组
-- groupdel
 
   > groupdel&nbsp;`用户组名`
     ```python
@@ -123,8 +114,7 @@ uname -a
   
     - 保存并退出
       
-- mkfs
-  
+
   > 可以格式化大部分linux文件系统类型。
 
   - mkfs.`文件系统类型` `磁盘名称`
@@ -133,8 +123,7 @@ uname -a
     mkfs.xfs /dev/sdb1
     ```
     
-- mount
-  
+ 
   - mount `磁盘名称` `文件目录`
   
     ```python
@@ -145,7 +134,7 @@ uname -a
 > **绝对路径**：由根目录`/`开始。<br>
 > **相对路径**：由当前工作路径开始。
 ### 查看当前目录下的文件
-- ls -l
+> ls -l
     ```python
     total 1 #目录下的文件个数
     drwxrwxrwx 1 tuo tuotuo 4096 Jan 15 00:00 tuotu0
@@ -171,15 +160,12 @@ pwd
 ```
 
 ### 更改文件所属用户组  
-- chgrp
-  
   > chgrp&nbsp;-R&nbsp;`新的所属用户组`&nbsp;`文件名`
 
     ```
     chgrp -R tuotuo tuotuo
     ```
 ### 更改所属用户
-- chown
   
   > chown&nbsp;`新的用户`&nbsp;`文件名`
   
@@ -187,7 +173,6 @@ pwd
     chown tuotuo tuotu0
     ```
 ### 更改文件各用户及用户组权限
-- chmod
 
   > chmod&nbsp;`权限`&nbsp;`文件名`
   
@@ -195,7 +180,6 @@ pwd
     chmod 770 tuotuo
     ```
 ### 切换工作目录
-- cd
   
   > cd&nbsp;`绝对路径或相对路径`
   
@@ -203,7 +187,6 @@ pwd
   cd /home/tuotuo
   ```
 ### 创建目录
-- mkdir
   
   > mkdir&nbsp;`目录名`
   
@@ -211,15 +194,14 @@ pwd
   mkdir tu0tu0
   ```
 ### 复制文件或目录
-- cp
-  
+
   > cp&nbsp;`被复制的文件名或目录名`&nbsp;`复制到xx文件或目录`
   
   ```python
   cp /home/tuotuo /home/tu0tu0
   ```
 ### 删除文件或目录
-- rm
+
   
   > rm&nbsp;-f&nbsp;-r&nbsp;`文件或目录名`
   
@@ -227,7 +209,7 @@ pwd
   rm -f -r xxx
   ```
 ### 移动文件或目录
-- mv
+
   
   > mv&nbsp;`被移动的文件名或目录名`&nbsp;`移动到xx目录`
   
@@ -248,7 +230,6 @@ jobs -l
   
   > `任务编号`、`PID`、`CMD`。
 ### 将暂停的后台任务移动到前台继续执行
-- fg
 
   > fg %`进程编号`
 
