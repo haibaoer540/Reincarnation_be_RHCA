@@ -88,7 +88,7 @@ groupmod –g 10000 -n tuo tuotuo
   
   4. > Command (m for help): <kbd>w</kbd>
 
-### 格式化磁盘的文件系统
+### 格式化磁盘
 - mkfs.`文件系统类型` `磁盘名称`
   > 可以格式化大部分linux文件系统类型。
   ```python
