@@ -68,7 +68,7 @@ groupmod –g 10000 -n tuo tuotuo
   ```
 ## 磁盘管理
 > `/dev/`目录是储存磁盘表的地方。
-### 创建新的主分区并挂载
+### 创建新的主分区
 > 使用`fdisk`创建新磁盘，再使用`mkfs`将磁盘格式化，最后使用`mount`将磁盘挂载。
 - fdisk
   > 2TB以下磁盘空间。
@@ -88,12 +88,13 @@ groupmod –g 10000 -n tuo tuotuo
   
   4. > Command (m for help): <kbd>w</kbd>
 
-  
+### 格式化磁盘的文件系统
 - mkfs.`文件系统类型` `磁盘名称`
   > 可以格式化大部分linux文件系统类型。
   ```python
   mkfs.xfs /dev/sdb1
   ```
+### 挂载磁盘
 - mount `磁盘名称` `文件目录`
   ```python
   mount /dev/sdc1 /home/tuotuo
