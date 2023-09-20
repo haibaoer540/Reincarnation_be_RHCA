@@ -49,7 +49,7 @@ usermod -d /home/tuo -m -s /bin/bash -g root -l tuo tuotuo
   passwd tuotuo
   ```
 ## 用户组管理
-> :mushroom:一个组可以有多个用户。
+> :mushroom:一个组可以有多个用户。<br>
 > `/etc/group`文件存储了`用户组名`:`口令`:`用户组gid`:`组内用户列表`。
 ### 创建用户组
 > groupadd&nbsp;-g&nbsp;`用户组gid`&nbsp;`用户组名`
