@@ -103,7 +103,7 @@ groupmod –g 10000 -n tuo tuotuo
 > ls -l
 - 输出以下内容
   ```python
-  total 1 #目录下的文件个数
+  total 1 
   drwxrwxrwx 1 tuo tuotuo 4096 Jan 15 00:00 tuotu0
   ```
 <details> 
@@ -200,3 +200,29 @@ kill %1 #任务编号
 ```python
 kill ftp #进程名称
 ```
+## 服务
+
+<details> 
+    <summary><b>常用的服务zh:en</b></summary>   
+  
+|防火墙||||||
+|:-:|:-:|:-:|:-:|:-:|:-:|
+|firewalld||||||
+
+</details>
+
+### 查看服务
+> systemctl status `服务名`
+  ```
+  systemctl status firewalld
+  ```
+### 关闭服务
+> systemctl stop `服务名`
+  ```
+  systemctl stop firewalld
+  ```
+### 开启服务
+> systemctl start `服务名`
+  ```
+  systemctl start firewalld
+  ```
