@@ -200,10 +200,10 @@ kill %1 #任务编号
 ```python
 kill ftp #进程名称
 ```
-## 服务
+## 服务管理
 
 <details> 
-    <summary><b>常用的服务zh:en</b></summary>   
+    <summary><b>常用的服务ZH:EN</b></summary>   
   
 |防火墙||||||
 |:-:|:-:|:-:|:-:|:-:|:-:|
