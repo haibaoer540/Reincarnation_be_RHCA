@@ -106,11 +106,13 @@ groupmod –g 10000 -n tuo tuotuo
 > **绝对路径**：由根目录`/`开始。<br>
 > **相对路径**：由当前工作路径开始。
 ### 查看当前目录下的文件
-> ls -l
+> ls -l 
+
+解释：查看`/home/tuotuo`目录下的所有文件
 
 ![](images/ll.png)
 
-total：中文名'总计'，意思是此目录下的所有文件总计的大小。
+total：中文名`总计`，意思是此目录下的所有文件总计的大小，单位`KB`。
 
 <details> 
     <summary><b>drwxrwxrwx</b></summary>
