@@ -107,11 +107,11 @@ groupmod –g 10000 -n tuo tuotuo
 > **相对路径**：由当前工作路径开始。
 ### 查看当前目录下的文件
 > ls -l
-- 输出以下内容
-  ```python
-  total 1 
-  drwxrwxrwx 1 tuo tuotuo 4096 Jan 15 00:00 tuotu0
-  ```
+
+![](images/ll.png)
+
+total：中文名'总计'，意思是此目录下的所有文件总计的大小。
+
 <details> 
     <summary><b>drwxrwxrwx</b></summary>
     <br>
