@@ -23,6 +23,9 @@ uname -a
   >`内核名`、`主机名`、`内核发行号`、`内核版本号`、`主机的硬件架构`、`操作系统名称`。
 ## 用户管理
 > :mushroom:一个用户可以有多个组。<br>
+
+<img src="images/yonghu.png" width="400" height="200" />
+
 > `/etc/passwd`文件储存了`用户名`:`口令`:`用户uid`:`用户组gid`:`注释性描述`:`用户主目录`:`Shell路径`。
 ### 创建新用户
   > useradd&nbsp;-d&nbsp;`用户主目录`&nbsp;-m&nbsp;-s&nbsp;`shell路径`&nbsp;`用户名`
@@ -48,6 +51,9 @@ usermod -d /home/tuo -m -s /bin/bash -g root -l tuo tuotuo
   ```
 ## 用户组管理
 > :mushroom:一个组可以有多个用户。<br>
+
+<img src="images/yonghu1.png" width="400" height="200" />
+
 > `/etc/group`文件存储了`用户组名`:`口令`:`用户组gid`:`组内用户列表`。
 ### 创建用户组
 > groupadd&nbsp;-g&nbsp;`用户组gid`&nbsp;`用户组名`
