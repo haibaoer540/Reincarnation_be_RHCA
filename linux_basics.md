@@ -113,8 +113,9 @@ groupmod –g 10000 -n tuo tuotuo
   drwxrwxrwx 1 tuo tuotuo 4096 Jan 15 00:00 tuotu0
   ```
 <details> 
-    <summary><b>drwxrwxrwx</b></summary>   
-    <img src="images/rwx.png" width="500" height="100" />
+    <summary><b>drwxrwxrwx</b></summary>
+    <br>
+    <img src="images/rwx.png" width="600" height="300" />
 </details>
 
 |1|tuo|tuotuo|4096|Jan 15 00:00|tuotu0|
