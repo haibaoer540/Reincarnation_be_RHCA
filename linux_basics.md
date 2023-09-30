@@ -114,18 +114,7 @@ groupmod –g 10000 -n tuo tuotuo
   ```
 <details> 
     <summary><b>drwxrwxrwx</b></summary>   
-  
-- 第一个字符为`d`表示该文件是一个文件夹（目录）
-- 第一个字符为`-`表示该文件是一个文件
-- 第一个字符为`l`表示该文件是一个链接文件
-
-      <img src="images/rwx.png" width="400" height="200" />
-
-|r|w|x|-|
-|:-:|:-:|:-:|:-:|
-|可读权限|可写权限|可执行权限|无权限|
- 
-
+    <img src="images/rwx.png" width="500" height="100" />
 </details>
 
 |1|tuo|tuotuo|4096|Jan 15 00:00|tuotu0|
