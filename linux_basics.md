@@ -108,9 +108,9 @@ groupmod –g 10000 -n tuo tuotuo
 ### 查看当前目录下的文件
 > ls -l 
 
-解释：查看`/home/tuotuo`目录下的所有文件
+温馨提示：将鼠标放在图片上会显示文字，解释图片的含义。
 
-![](images/ll.png)
+<img src="images/ll.png" title="查看'/home/tuotuo'目录下的所有文件" />
 
 total：中文名`总计`，意思是此目录下的所有文件总计的大小，单位`KB`。
 
