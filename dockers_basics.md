@@ -1,6 +1,6 @@
 # docker安装
 > [docker官网安装教程-将docker安装在各个操作系统](https://docs.docker.com/get-docker/)<br>
-
+<!--  ceshi  -->
 主要安装以下组件
 - docker-ce
 - docker-ce-cli
